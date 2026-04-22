@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<header>
+    <h2>Dashboard</h2>
+    <a href="/logout" class="btn secondary">Logout</a>
+</header>
+
+<div class="container">
+    <h1>Products</h1>
+
+    {% for p in products %}
+    <div class="icon-box">
+        <p>{{ p.name }}</p>
+        <small>₹{{ p.price }}</small><br>
+
+        <a href="/add/{{ p.id }}" class="btn primary">Add to Cart</a>
+    </div>
+    {% endfor %}
+
+    <a href="/checkout" class="btn secondary">Checkout</a>
+
+    {% if session['role'] == 'admin' %}
+        <br><br>
+        <a href="/admin" class="btn primary">Go to Admin</a>
+    {% endif %}
+</div>

@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<header>
+    <h2>E-Commerce</h2>
+    <a href="/login" class="btn secondary">Login</a>
+</header>
+
+<div class="container">
+    <h1>Products</h1>
+
+    {% for p in products %}
+    <div class="icon-box">
+        <p>{{ p.name }}</p>
+        <small>₹{{ p.price }}</small>
+    </div>
+    {% endfor %}
+</div>

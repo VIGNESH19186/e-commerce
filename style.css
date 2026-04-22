@@ -1,0 +1,168 @@
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe4e6, #fff);
+    color: #c75f71;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HEADER TITLE */
+header h2 {
+    margin: 0;
+}
+
+/* CONTAINER */
+.container {
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* INPUT */
+input, textarea {
+    width: 90%;
+    padding: 12px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #c75f71;
+    outline: none;
+    box-shadow: 0 0 5px rgba(199,95,113,0.5);
+}
+
+/* BUTTON */
+.btn {
+    padding: 10px 18px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* PRIMARY */
+.primary {
+    background: #c75f71;
+    color: white;
+}
+
+.primary:hover {
+    background: #a94a5c;
+    transform: scale(1.05);
+}
+
+/* SECONDARY */
+.secondary {
+    border: 2px solid #c75f71;
+    color: #c75f71;
+    background: transparent;
+}
+
+.secondary:hover {
+    background: #c75f71;
+    color: white;
+}
+
+/* TASK CARD */
+.icon-box {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+}
+
+/* TASK TEXT */
+.icon-box p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+/* STATUS TEXT */
+.icon-box small {
+    color: gray;
+}
+
+/* COMPLETED TASK */
+.completed p {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* BUTTON SPACING */
+.icon-box .btn {
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+}
+
+/* EMPTY TASK */
+.no-task {
+    color: gray;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* DASHBOARD TITLE */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .icon-box {
+        padding: 15px;
+    }
+
+    .icon-box p {
+        font-size: 16px;
+    }
+}
